@@ -1,0 +1,408 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%COPYRIGHT 2015%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4papper,overlapped,line]{res}
+% \documentclass[a4papper,margin,line]{res}
+\newsectionwidth{.7cm}
+\usepackage{color}
+\definecolor{SOrange}{rgb}{1,0.44,0.04}
+\usepackage{scalefnt}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=blue,
+}
+\definecolor{antiquewhite}{rgb}{0.98, 0.92, 0.84}
+\definecolor{babyblueeyes}{rgb}{0.63, 0.79, 0.95}
+\definecolor{beaublue}{rgb}{0.74, 0.83, 0.9}
+\definecolor{buff}{rgb}{0.94, 0.86, 0.51}
+\definecolor{burlywood}{rgb}{0.87, 0.72, 0.53}
+\definecolor{carolinablue}{rgb}{0.6, 0.73, 0.89}
+\definecolor{charcoal}{rgb}{0.21, 0.27, 0.31}
+\definecolor{cobalt}{rgb}{0.0, 0.28, 0.67}
+\definecolor{columbiablue}{rgb}{0.61, 0.87, 1.0}
+\definecolor{coolblack}{rgb}{0.0, 0.18, 0.39}
+\definecolor{cornsilk}{rgb}{1.0, 0.97, 0.86}
+\definecolor{cosmiclatte}{rgb}{1.0, 0.97, 0.91}
+\definecolor{darkcerulean}{rgb}{0.03, 0.27, 0.49}
+\definecolor{gainsboro}{rgb}{0.86, 0.86, 0.86}
+\definecolor{gray(x11gray)}{rgb}{0.75, 0.75, 0.75}
+\definecolor{ivory}{rgb}{1.0, 1.0, 0.94}
+\definecolor{isabelline}{rgb}{0.96, 0.94, 0.93}
+\definecolor{lapislazuli}{rgb}{0.15, 0.38, 0.61}
+\definecolor{lime(web)(x11green)}{rgb}{0.0, 1.0, 0.0}
+\definecolor{linen}{rgb}{0.98, 0.94, 0.9}
+\definecolor{mayablue}{rgb}{0.45, 0.76, 0.98}
+\definecolor{mediumcandyapplered}{rgb}{0.89, 0.02, 0.17}
+\definecolor{mediumelectricblue}{rgb}{0.01, 0.31, 0.59}
+\definecolor{mediumspringgreen}{rgb}{0.0, 0.98, 0.6}
+\definecolor{mediumturquoise}{rgb}{0.28, 0.82, 0.8}
+\definecolor{mint}{rgb}{0.24, 0.71, 0.54}
+\definecolor{mintgreen}{rgb}{0.6, 1.0, 0.6}
+\definecolor{naplesyellow}{rgb}{0.98, 0.85, 0.37}
+\definecolor{orange-red}{rgb}{1.0, 0.27, 0.0}
+\definecolor{oxfordblue}{rgb}{0.0, 0.13, 0.28}
+\definecolor{palecerulean}{rgb}{0.61, 0.77, 0.89}
+\definecolor{pastelred}{rgb}{1.0, 0.41, 0.38}
+\definecolor{phthalogreen}{rgb}{0.07, 0.21, 0.14}
+\definecolor{pinegreen}{rgb}{0.0, 0.47, 0.44}
+\definecolor{prussianblue}{rgb}{0.0, 0.19, 0.33}
+\definecolor{st.patrick\'sblue}{rgb}{0.14, 0.16, 0.48}
+\definecolor{shamrockgreen}{rgb}{0.0, 0.62, 0.38}
+\definecolor{springgreen}{rgb}{0.0, 1.0, 0.5}
+\definecolor{tiffanyblue}{rgb}{0.04, 0.73, 0.71}
+\definecolor{titaniumyellow}{rgb}{0.93, 0.9, 0.0}
+\definecolor{yaleblue}{rgb}{0.06, 0.3, 0.57}
+\definecolor{yellow}{rgb}{1.0, 1.0, 0.0}
+\definecolor{babyblueeyes}{rgb}{0.63, 0.79, 0.95}
+\definecolor{chartreuse(traditional)}{rgb}{0.87, 1.0, 0.0}
+\definecolor{champagne}{rgb}{0.97, 0.91, 0.81}
+\definecolor{eggshell}{rgb}{0.94, 0.92, 0.84}
+%%%%
+\definecolor{BlueLUH}{cmyk}{1.0,0.7,0,0}
+%%%%
+\colorlet{LightBlue}{BlueLUH!20!white}
+\colorlet{DarkBlue}{BlueLUH!80!black!20}
+\newcommand{\mytag}[1]{
+\begin{tikzpicture}[baseline={(TAG.base)}]
+  \node[draw, minimum height=1ex] (TAG) {#1};
+\end{tikzpicture}}
+\usetikzlibrary{shapes.geometric}
+\newcommand{\tagf}[2][]{
+{
+\scalefont{0.8}
+\begin{tikzpicture}[baseline={(TAG.base)}]
+\node[draw,#1] (TAG) {#2\strut};
+\end{tikzpicture}
+}
+}
+\tikzset{My Tag Style/.style={black, fill=champagne,  rounded corners, , font=\fontsize{0.1}{.1}}}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{times} 
+%\oddsidemargin -.5in
+%\evensidemargin -.5in
+%\textwidth=6.0in
+\itemsep=0in
+\parsep=0in
+\newcommand{\jobdes}[3]{{\bf \large #1\hspace{2ex}}{{\em \small #2}}{\hfill #3}}
+%use like \jobdes{job title}{company, location}{dates}
+\newcommand{\osection}[1]{\section{\sc {\color{MidnightBlue}\vspace{-0.60cm} \textbf{#1}\\}}}
+\usepackage{changepage}
+\newenvironment{changemargin}[2]{\begin{list}{}{
+\setlength{\topsep}{0pt}\setlength{\leftmargin}{0pt}
+ \setlength{\rightmargin}{0pt}
+ \setlength{\listparindent}{\parindent}
+ \setlength{\itemindent}{\parindent}
+ \setlength{\parsep}{0pt plus 1pt}
+ \addtolength{\leftmargin}{#1}\addtolength{\rightmargin}{#2}
+ }\item }{\end{list}}
+\begin{document}
+%|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+\name{{\color{MidnightBlue}\Huge\bf{AUSTIN VERN SONGER}}} 
+%|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+% To change the name size change 
+% \def\namefont{\large\bf} to for example
+% \def\namefont{\Large\bf}
+\address{ \begin{tabular}{ll}
+4641 North Paulina Street  & {\it Mobile:} (708) 829-9576 \\            
+Chicago, Illinois 60640  & {\it E-mail:} austin@austinsonger.me\\              
+{\it Citizenship:} USA  & {\it Website:} blog.austinvernsonger.com\\ 
+{\it Veterans’ Preference:} Yes  & \\
+ &\hspace{2.7em}             \\     
+\end{tabular}}
+\begin{resume}
+% \vspace{0.60cm}
+\begin{changemargin}{-0.7cm}{-2.3cm}
+{\setlength{\fboxsep}{18pt}
+\colorbox{champagne}{
+\begin{minipage}{0.95\textwidth}
+\rmfamily
+%\ttfamily
+\begin{flushleft}
+\hspace{-0.54cm}{\scalefont{1.2}\textbf{\begin{Huge}\textquotedblleft\end{Huge}}}
+\\
+\vspace{-0.65cm}
+\begin{small}
+\textbf{Top achiever and inspirational leader with high expectations and dedication to excellence in project delivery. Known for crafting the requisite strategic vision to achieve business goals, with 11 years in the work force and over 6 years of experience in the United States Navy. A multi-talented professional with expertise in many fields such as administration, business analysis, information security strategies, information assets, security technologies, records management, information systems, healthcare administration.}\textquotedblright
+\end{small}\end{flushleft}
+\end{minipage}}}
+\end{changemargin}
+%|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+%|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+\vspace*{-2.5mm}
+\vspace{0.50cm}
+\setlength\parindent{0pt}
+%|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+\osection{CAREER HISTORY}
+%|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+\vspace{0.20cm}
+\jobdes{Technology and Data Services Coordinator}{American Academy of Orthopaedic Surgeons} \\Mar 2015-Present\\
+\textit{Hours per week:} 40 Hrs
+\vspace{0.20cm}
+\begin{itemize}
+	\item Provides ongoing support to the Chief Technology Officer with various tasks related to the smooth operation of the TDS team. 
+	\item Assists with the management of the Chief Technology Officer’s schedule, coordinating meetings, drafting correspondence, and scheduling travel.
+	\item Ensures that correspondence into and out of the Chief Technology Officer’s office is processed in a timely and appropriate manner.
+	\item Supports the Chief Technology Officer’s efforts to maintain a fiscally responsible operation by assisting with ongoing financial tasks.
+	\item \textbf{This includes tracking costs against budgets, project cost tracking, assisting with the rolling forecast, annual program or work, and cost center allocations:}
+\begin{itemize}
+	\item Drafts preliminary reports showing financial performance of the team and its projects. 
+	\item Supports the Technology and Data Services team by scheduling meetings, assisting with the development of operational reports, assisting with travel and conference registration tasks.
+	\item Maintains a shared calendar tracking the Technology and Data Services team’s availability and work schedules. 
+	\item Responsible for creating and maintaining a file management system that ensures that all Technology and Data Services filing needs are met.
+\end{itemize} 
+	\item \textbf{This  is includes tracking of new, renewing, and ongoing contracts, project based statements of work, archival project files, and others as needed:}
+\begin{itemize}
+	\item Works with the Senior IT Project Manager on project management tasks as needed. 
+	\item Assists the Technology and Data Services team by ensuring that work order based communications and status updates are provided in a timely manner. 
+	\item Alerts appropriate staff if work orders become stale or are not closed appropriately.
+	\item Performs other duties as assigned by the Chief Technology Officer.
+\end{itemize}
+	\item \textbf{AAOS Website Redesign:}
+\begin{itemize}
+	\item Member of the core team
+	\item Provides technical support to local content managers
+\end{itemize}	
+\medskip
+\par
+\vspace{-0.3cm}
+\hspace{0.2cm}
+\foreach \x in {Project Management, Data Governance, Records Management, Information Assets, Information Security,  Windows, Bugherd,  HTML5, CSS, XML, Ektron, MySQL} {%
+\tagf[My Tag Style]{\x}\hspace{-0.25cm}}\\
+\linebreak
+\end{itemize}
+\vspace{0.20cm}
+\jobdes{2nd Class Petty Officer - Client Relationship Manager / System Administrator }\\
+{United States Navy - Captain James A. Lovell Federal Health Care Center} \\ \textit{May 2010 - Oct 2010}\\
+\textit{Hours per week:} 60 Hrs
+\vspace{0.20cm}
+\\
+The Interactive Customer Evaluation (ICE) system is a web-based tool that collects feedback on services provided by various organizations throughout the Department of Defense (DoD). The system allows customers to submit online comment cards to provide feedback to the service providers they have encountered at military installations and related facilities around the world. It is designed to improve customer service by allowing managers to monitor the satisfaction levels of services provided through reports and customer comments.
+\begin{itemize}
+	\item \textbf{LED CHANGE INITIATIVE} - Established and Implemented the Interactive Customer Evaluation (ICE) system and designed a plan to site initiate the ICE system within the Directorate of Fleet Medicine,followed by implementation throughout the entire Captain James A. Lovell Federal Health Care center and outlying outpatient clinics, paving the way for the Veteran Health Administration implementation.
+	\item \textbf{IMPLEMENTED CHANGE TO IMPROVE CUSTOMER SERVICE FEEDBACK} - The system streamlined the time that customer relation issues were resolved, thus increasing customer satisfaction by 20 percent and an increase in the volume of comments submitted on a monthly basis by 500 percent.
+	\item \textbf{PROCESS IMPROVEMENT} - The ICE system led the command in a new direction by being able to Data mine 5 years of quality customer service comments and recommendations that could be used to determine what areas needed to be improved.
+	\item \textbf{PROJECT MANAGEMENT} - Spearheaded the strategic planning and deployment of 20,000 dollars' worth of computer hardware consisting of 8 kiosks in 4 physical locations and servicing over 40,000 patients annually. Authored, disseminated and implemented security procedures and policy to protect critical IT equipment and data.
+\end{itemize}
+\par
+\vspace{-0.3cm}
+\hspace{0.2cm}
+\foreach \x in {} {%
+\tagf[My Tag Style]{\x}\hspace{-0.25cm}}\\
+\linebreak
+\jobdes{2nd Class Petty Officer  - Leading Petty Officer (Clinic Manager)\hspace{1.0ex}}\\
+{United States Navy - Captain James A. Lovell Federal Health Care Center} \\ \textit{July 2011 - June 2014}\\
+\textit{Hours per week:} 60 Hrs
+\vspace{0.20cm}
+\\
+Directing, supervising and evaluate work activities of medical, nursing, technical, clerical, service, and other personnel. Maintain communication between staff, department heads, and directors by attending board meetings and coordinating interdepartmental functions.Plan, implement and administer programs and services in a health care or medical facility, including personnel administration, training, and coordination of medical, and other clerical staff. 
+\begin{itemize}
+	\item \textbf{EFFICIENTLY MANAGED and TRACKED} medical readiness for 14 military facilities; raised Individual Medical Readiness from 42 percent to 82 percent in just 10 months.
+	\item Supervised and monitored the completion of over 430 Recruit special duty physical examinations for three separate Recruit training groups resulting in a 96 percent on-time graduation and transfer rate.
+	\item \textbf{DEVELOPED} study guides and provided advancement material for five junior sailors and educated all clinical staff tuition assistance, college enrollment, and commissioning programs.
+	\item \textbf{AS AN AEROSPACE MEDICINE TECHNICIAN}, assisted in the completion of over 500 flight physicals for recruits aboard Recruit Training Command Great Lakes. Provided Weekly Individual Medical Readiness reports to United States Strategic Command and 287 personnel.
+	\item \textbf{MONITORED} the health and wellness status across seven Healthcare Effectiveness data and information set measures for 3,919 active duty personnel.
+\end{itemize}
+\par
+\vspace{-0.3cm}
+\hspace{0.2cm}
+\foreach \x in {} {%
+\tagf[My Tag Style]{\x}\hspace{-0.25cm}}\\
+%|||||||||||||||||||||||||||||||||
+\vspace{0.20cm}
+\medskip
+\\
+\vspace{0.20cm}
+\jobdes{Aerospace Medicine Technician School (Hospitalman Apprentice / Hospitalman)}\\
+{Pensacola, Florida}{ - February 2009 - May 2009}\\
+\\
+\vspace{0.20cm}
+\textit{10 weeks (400 hours)}
+\begin{itemize}
+	\item Upon completion of the course, the student will be able to articulate the anatomy and physiology of the eye, ear, nose, throat and sinuses; describe the causes, symptoms, and treatments of hypoxia, hyperventilation and decompression sickness; perform ophthalmic, audiometric, and electrographic examinations; obtain medical history and physical assessment according to the subjective/objective assessment plan (SOAP); manage health record administration including opening, maintaining and closing forms; and articulate the policies and procedures for health record information release.
+	\item Lecture, laboratory, discussions, classroom exercise, practical exercises, learner presentation and audio/visual materials. Topics include anatomy and physiology of eye, ear, nose and throat, environmental physiology-hypoxia, hyperventilation; decompression sickness; health record administration; basic life support; basic visual examinations; and ophthalmic, audiometric, and electrographic examination equipment.
+\end{itemize}
+\par
+\vspace{-0.3cm}\hspace{0.2cm}
+\foreach \x in {} {%
+    \tagf[My Tag Style]{\x}\hspace{-0.25cm}}
+%|||||||||||||||||||||||||||||||||
+\medskip
+\\
+\jobdes{Hospitalman Recruit}{Great Lakes, Illinois}{October 2008 - January 2009}
+\\
+\textit{14 weeks (560 hours)}
+\begin{itemize}
+	\item Upon completion of the course, the student will be able to perform duties as general service hospital corpsmen and perform emergency medical and nursing care procedures.
+	\item Practical exercises, laboratory, lecture, performance checklist, and clinical. Topics include anatomy and physiology, nutrition, cardiopulmonary resuscitation (CPR), medical legal/ethical issues, behavioral emergencies, patient assessment trauma injuries, medical decision making, nursing procedures, medication administration, parenteral and intravenous medication and administration, pre- and post-op nursing care, nursing clinical experience, health assessment, and clinical laboratory procedures.
+\end{itemize}
+\par
+\vspace{-0.3cm}\hspace{0.2cm}
+\foreach \x in {} {%
+	\tagf[My Tag Style]{\x}\hspace{-0.25cm}}
+%|||||||||||||||||||||||||||||||||
+\medskip
+\\
+\jobdes{Seaman Recruit}{Agana Heights, Guam}{July 2008 - September 2008}
+\\
+\textit{8 weeks (157 hours)}
+\\
+\begin{itemize}
+	\item Upon completion of the course, the student will be able to demonstrate knowledge of general military and Navy protocol, first aid, personal health, safety, basic swimming, water survival skills, physical fitness, and fire fighting. Audiovisual materials, practical exercises, classroom exercises, laboratory, and lecture. Topics include military protocol, seamanship, fire fighting, first aid, safety, health, and physical conditioning.
+\end{itemize}
+\par
+\vspace{-0.3cm}\hspace{0.2cm}
+\foreach \x in {} {%
+	\tagf[My Tag Style]{\x}\hspace{-0.25cm}}
+%||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+\osection{COLLATERALS}
+%|||||||||||||||||||||||||||||||||
+\jobdes{Information Security Analyst (Access Management Specialist)}{North Chicago, Illinois}{June 2012 - June 2014}\\
+\textit{Hours per week:} 20 Hrs
+\medskip
+\\
+FHCC Information Security Analyst is the immediate point of contact for all
+departmental information security/assurance issues and problems . The FHCC ISA assists
+the Information Security Officer (ISO) by exercising day to day control of sensitive
+information resources . The ISA is instrumental in ensuring compliance with facility,
+directorate, departmental, policy and standard operating procedures . The DSO ensures
+countermeasures (procedural and physical) exist and are working to enhance Information
+Security.
+\medskip
+\\
+The FHCC ISA is responsible to review user practices and procedures for possible vulnerabilities which may pose a threat to information security.
+\\
+\begin{itemize}
+	\item Ensure compliance with proper media/equipment control and labeling procedures.
+	\item Ensure “need to know” and “least privilege” rules are enforced.
+	\item Assist the information security office in conducting information security rounds to assure information security policies and procedures are followed by Department Users.
+	\item Assist the information security office in investigating and reporting actual and suspected information security violations and report these immediately to the information security office.
+	\item Ensure that all information systems are properly managed and process data consistent with facility policy and within their security parameters.
+	\item Ensure that Department controls, which regulate the use of unclassified and sensitive information, are consistent with facility policy.
+	\item Maintain accountability and control over all portable media and devices.
+	\item FHCC Access Coordinator for all Department users requiring access to facility computer systems. Responsibility includes processing all Access Requests.
+	\item Function as the Application Coordinator for all Department specific applications and participate in training programs to ensure an appropriate level of expertise about the functions and capabilities of these programs.
+\end{itemize}
+%|||||||||||||||||||||||||||||||||
+\jobdes{Records Manager / Forms Manager}{North Chicago, Illinois}{June 2012 - June 2014}\\
+\textit{Hours per week:} 20 Hrs
+\\
+%|||||||||||||||||||||||||||||||||
+Administering the organization’s records management program; Coordinating with and/or
+advising on matters relating to records management with Freedom of Information Act
+(FOIA)/Privacy Act (PA) staff.
+\\
+\begin{itemize}
+	\item Providing advice and guidance to management and staff on the creation, maintenance 
+	and use of records, electronic recordkeeping and electronic mail systems; 
+	\item Ensuring the proper disposition of records consistent with Government wide policies 
+	and procedures;
+	\item Developing plans and procedures for implementing records management policies, 
+	regulations, retention schedules and other policy formulated by policy setting 
+	agencies such as the United States Navy and National Archives and Records Administration (NARA).
+	\item Conducting periodic records management quality control reviews, compliance audits, 
+	risk assessments and surveys to measure the effectiveness of electronic systems and 
+	for general program improvement purposes; 
+	\item Organizing records and information based on agency lines of business, and 
+	developing plans for logical filing structures, information access and training; 
+	\item Analyzing business processes to improve or make use of automated tools, systems  and technology to provide accurate and timely responses to records inquiries and  requests; and/or Assessing records and information practices to ensure they support the principles of transparency and information sharing throughout the organization, agency and Government.
+\end{itemize}
+
+%||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+\osection{EDUCATION}
+%|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+\vspace{0.7cm}
+\jobdes{Masters of Information Systems (Concentration: Information Security)}\\
+{Robert Morris University - Chicago, Illinois  }{\textit{February 2015 - August 2016}}\\
+Semester Hours Completed: 28 \vspace{0.2cm}
+\\
+\jobdes{Bachelor of Arts}\\
+{Eastern Illinois University - Champaign, Illinois  }{\textit{February 2015 - August 2016}}\vspace{0.2cm}
+\\ 
+\linebreak
+%|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+\osection{TECHNOLOGY}
+%|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+\textbf{Languages}:  Python, Matlab\textbackslash Octave, BASH, JAVA, \LaTeX, HTML, HTML5, CSS, XML \\
+\textbf{Applications}: Microsoft Office, Phabricator, Gitlab, Filezilla, Atom, Sublime, Adobe Acrobat, Visual Studio,    \\
+\textbf{Version Control}: git, Subversion  \\
+\textbf{Operating Systems}:   Ubuntu\textbackslash Debian, Kali Linux, Windows, OSX\\
+\textbf{Server Side Applications}: Apache, MySQL, SAMBA,  Trac, Apache, NFS \& AutoFS,  BIND, LDAP\textbackslash NIS.\\
+\textbf{Configuration Management \& Monitoring}: Wireshark\\
+\textbf{Content Management Systems}: Ektron, Drupal, Joomla, Wordpress\\
+\linebreak
+%||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+%||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+\osection{HONORS AND AWARDS}
+%||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Navy and Marine Corps Commendation Medal \hfill \textbf{July 2014} \\
+\textit{Commanding Officer, Jose Acosta, CAPT, MC, USN}
+\begin{itemize}
+	\item Meritorious service in the superior performance of his duties while serving as the interactive Customer Evaluation Program Manager, Captain James A. Lovell Federal Health Care Center, North Chicago, Illinois from January 2013 to July 2014. Petty Officer Songer Skillfully Implemented The Interactive Customer Evaluation Program (ICE) within the federal health care center. He meticulously tracked 1,150 Cusomer Comments, which enabled Leadership to address patient Service enhancing the Environment of Patient Center Care. Additionally, He trained 115 Departmental Customer Service representatives on the proper use of the ICE program. Petty Officer Songer's Initiative, Perseverance and Loyal devotion to duty reflected great credit upon himself and were in keeping with the highest traditions of the United states Naval Service.
+\end{itemize}
+Navy Achievement Medal \hfill \textbf{2008} \\
+\textit{Commanding Officer, Naval Hospital Guam}
+\begin{itemize}
+	\item Professional Achievement in the superior performance of his duties while serving as Leading Petty Officer, Physical Exams Department, U.S. Naval Hospital, Guam From June 2009 to June 2011. Petty Officer Songer was instrumental in the processing of 3,500 Candidates for military service. He revamped standard operating procedures and dtreamlined the documentation system which decreased processing time by 50 percent. As the department customer service representative, he led the clinic to achieve a 100 percent Customer Satisfaction Rating, The highest in the Navy Medicine for first quarter fiscal year 2011. Petty Officer Song's initiative, perseverance, and loyal devotion to duty reflected credit upon himself and were in keeping with highest traditions of the United States Naval Service.
+\end{itemize}
+Flag Letter of Commendation \hfill  \textbf{January 2011} \\
+Junior Sailor of the Quarter 1st Quarter, Fiscal Year 2011\hfill \textbf{December 2011} \\
+\\
+%|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+\osection{Publications}
+\begin{itemize}
+	\item \href{http://blog.syscomservices.com/document-technology/tips-for-finding-the-best-document-management-system}{Syscom Services: Finding the Best Document Management System}
+\end{itemize}
+%|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+%|||||||\begin{small}Mother language: Hebrew.\\
+%|||||||\vspace{-.3cm}  
+%|||||||\newcommand{\mc}[3]{\multicolumn{#1}{#2}{#3}}
+%||||||| \begin{center}
+%|||||||\begin{tabular}{lllll}
+%||||||| Other languages$^*$: & \mc{2}{c}{Understanding} & \mc{1}{c}{Speaking} & \mc{1}{c}{Writing}\\
+%|||||||  & Listening & Reading &  & \\
+%|||||||English & C2 & C2 & C2 & C2\\
+%|||||||German & C1 & C1 & C1 & B2
+%|||||||\end{tabular}
+%||||||| \end{center}
+%|||||||\end{small}\\
+%|||||||\vspace{-.3cm}
+%|||||||\begin{footnotesize}$^*$ Evaluation according to Common European Framework of Reference (CEF). 
+%|||||||\end{footnotesize}
+%|||||||\linebreak
+%|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+%|||\osection{COMMUNITY/CIVIC SERVICE}
+%|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+%|||\begin{itemize}
+%|||	\item 
+%|||	\item 
+%|||	\item 
+%|||\end{itemize}
+%|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+\osection{CERTIFICATIONS}
+%|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+\begin{itemize}
+	\item CompTIA Project +
+	\item Google Analytics Certified
+	\item ITIL Foundations V3 - Planned December 2015
+	\item Ec-Council Certified Ethical Hacker (CEH) - Planned January 2016
+	\item Certified Information Systems Security Professional (CISSP)  – Planned May 2016
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{resume}
+\end{document}
+
